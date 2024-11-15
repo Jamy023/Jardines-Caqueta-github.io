@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enviar correo desde JavaScript</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Tu nombre" required>
+    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+    <textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    // Inicializa EmailJS
+    (function() {
+      emailjs.init("vdRQPV8vY61B56kDS"); // Usa tu ID de usuario de EmailJS
+    })();
+
+    // Función para manejar el envío del formulario
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.send("servicio_pnge1q9", "plantilla_0ypxk4s", {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      })
+      .then(function(response) {
+        alert("Mensaje enviado exitosamente!");
+      }, function(error) {
+        alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+      });
+    });
+  </script>
+</body>
+</html>

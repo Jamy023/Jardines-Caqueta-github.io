@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: rgba(15, 99, 40, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin-left: 50px;
+}
+
+
+
+main {
+    background-image: url("../img/pixelcut-export\ \(4\).jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la sección de calificaciones */
+.calificaciones {
+    background-color: #ffffff;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.calificaciones h3 {
+    font-size: 32px;
+    color: #243642;
+    margin-bottom: 40px;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.review {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.review p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.review span {
+    font-weight: bold;
+    color: #243642;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: rgb(15, 99, 40, 0.9);
+    color: #ffffff;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    transition: opacity 0.3s ease;
+}
+
+.social-media a:hover {
+    opacity: 0.7;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.featured-section {
+    background-color: #f0f5f0; /* Un tono verde claro que complementa la temática de plantas */
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.featured-section h2 {
+    font-size: 32px;
+    color: #243642;
+    margin-bottom: 40px;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.featured-plant {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.featured-plant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.featured-plant img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.featured-plant h3 {
+    font-size: 20px;
+    color: #243642;
+    margin: 15px 0 10px;
+}
+
+.featured-plant p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 15px 20px;
+    line-height: 1.5;
+}
+nav ul li {
+    margin-left: 50px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: block; /* Added to ensure proper alignment */
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Updated Dropdown styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures dropdown starts right below the link */
+    left: 50%; /* Center horizontally relative to parent */
+    transform: translateX(-50%); /* Center the dropdown */
+    background-color: rgba(36, 54, 66, 0.95);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 0 0 5px 5px;
+    z-index: 1001;
+    margin-top: 10px; /* Added space between link and dropdown */
+}
+
+/* Added dropdown arrow */
+.dropdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(36, 54, 66, 0.95);
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+    width: 100%;
+}
+
+.dropdown li a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    font-size: 14px;
+    text-align: center; /* Center the text in dropdown items */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown li a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 5%;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .calificaciones h3 {
+        font-size: 28px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+
+    
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review {
+        width: 100%;
+        max-width: none;
+    }
+}
